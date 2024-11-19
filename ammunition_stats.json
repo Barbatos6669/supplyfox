@@ -1,0 +1,16 @@
+[
+    {
+        "name": "8mm",
+        "icon": "https://foxhole.wiki.gg/images/3/31/PistolAmmoItemIcon.png",
+        "faction": "Both",
+        "type": "Magazine",
+        "category": "Small Arms",
+        "damage": {
+            "min": 30,
+            "max": 45,
+            "subtype": "45"
+        },
+        "weight": 10,
+        "amount_per_crate": 40
+    }
+]

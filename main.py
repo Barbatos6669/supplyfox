@@ -1,7 +1,7 @@
-""" main.py
+"""
+main.py
 
-    This is the main file for the project. It will be used to run the discord bot project.
-    
+This is the main file for the project. It will be used to run the discord bot project.
 """
 
 # Importing the discord library
@@ -13,6 +13,9 @@ import os
 
 # Importing the dotenv library
 from dotenv import load_dotenv
+
+# Importing the asyncio library
+import asyncio
 
 # Load environment variables from .env file
 load_dotenv()
@@ -39,5 +42,19 @@ async def on_ready():
 async def hello(interaction: discord.Interaction):
     await interaction.response.send_message('Hello!')
 
-# Run the bot
-bot.run(TOKEN)
+async def load_cogs():
+    for filename in os.listdir('./cogs'):
+        if filename.endswith('.py'):
+            try:
+                await bot.load_extension(f'cogs.{filename[:-3]}')
+                print(f'Loaded cog: {filename}')
+            except Exception as e:
+                print(f'Failed to load cog {filename}: {e}')
+
+
+async def main():
+    await load_cogs()
+    await bot.start(TOKEN)  # Use the TOKEN variable here
+
+if __name__ == "__main__":
+    asyncio.run(main())

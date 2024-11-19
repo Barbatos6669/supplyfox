@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Argenti r.II Rifle",
+        "icon": "https://foxhole.wiki.gg/images/f/fc/RifleCItemIcon.png",
+        "faction": "Colonial",
+        "type": "Rifle",
+        "category": "Small Arms",
+        "equipment_slot": "Primary (#1)",
+        "ammunition": "7.62mm",
+        "damage": {
+            "min": 45,
+            "max": 67,
+            "subtype": "67"
+        },
+        "fire_rate": "81 rounds/min",
+        "firing_mode": "Semi-automatic",
+        "range": {
+            "effective": "25",
+            "max": "40"
+        },
+        "magazine_size": 12,
+        "reload_time": "3.5",
+        "weight": {
+            "base": 70,
+            "with_uniform_bonus": 52
+        },
+        "amount_per_crate": "20"
+    }
+]
